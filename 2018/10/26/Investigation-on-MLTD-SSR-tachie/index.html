@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><meta name="author" content="EllisNewman"><link rel="icon" href="/icon.png"><title>星之海原</title><meta name="description"><link rel="alternate" type="application/rss+xml" title="星之海原" href="/atom.xml"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/highlight.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#main-navbar" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">星之海原</a></div><div id="main-navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="/archives">Archive</a></li><li><a href="https://github.com/twoyao/beautiful-hexo">Github</a></li><li><a href="/about/">About</a></li></ul></div><div class="avatar-container"><div class="avatar-img-border"><a href="/"><img src="/icon.png" class="avatar-img"></a></div></div></div></nav><header class="header-section"><div class="intro-header no-img"><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="post-heading"><h1>Investigation on MLTD SSR tachie</h1><p class="post-meta">Posted on 10月 26 2018</p></div></div></div></div></div></header><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role="main" class="blog-post"><p>可能有同僚早就注意到了也说不定。不过这也没啥方法检索的样子，也没办法查重(x)。总之在这里试着进行一些考察和分析。</p>
+<p>​首先，事件是这样的。</p>
+<p>推特上​的<a href="https://twitter.com/search?q=%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF%E7%AB%8B%E3%81%A1%E7%B5%B5&amp;src=typd" target="_blank" rel="noopener">#ミリシタ立ち絵</a>，想必各位已经有所了解了。通过这个tag，能够搜索到由他人发布的，各种从土豆卡面扣出来的人物立绘。如下图：</p>
+<p>确实是很精细的抠图作业。赞美提供者<a href="https://twitter.com/morisoba1986" target="_blank" rel="noopener">@morisoba1986</a>。不过，和自己印象里看到的模样似乎有一些不同。</p>
+<p>众所周知，土豆中单张SSR的卡面分为两种。一种横版大图，分辨率为1280x720，一种竖版小图，分辨率为640x800。在这之前，自己一直以为竖版图仅仅是从横版图之中进行裁剪，仅取出人物部分而进行使用的。</p>
+<p>然而，自己在感觉到有些异样之后，将游戏数据中获取的两种卡面进行对比，便能够很明显地看出差别了：</p>
+<p>竖版卡图能够完整看到紬紬帽子顶上的绳结，以及下方大衣上的数排扣子。显然，竖版卡图并不是简单地对横版卡图进行裁剪，在那基础之上还有更多的卡面细节。</p>
+<p>于是进行了一些考证。​既然紬紬这张卡面是这样，那么其他的SSR呢？往期卡池中的卡又是什么情况呢？​</p>
+<p>这里使用了上次fes，yayoi和iori的卡面进行对比。从yayoi左腿和头发旁的枫叶可以很明显地看出，yayoi的竖版卡面中仍然包含了更多的内容。而iori这张，横版和竖版则没有较大的差别。</p>
+<p>也就是说，根据情况不同，既存在竖版卡面在纵向上包含更多细节，也会存在竖版卡面几乎等于横版卡面中的一部分的情况。（这里说“几乎”，是因为上述iori这张卡和自己对比过的另几张卡，虽然一眼看去完全相同，但仔细对比后仍存在X轴或Y轴上数列像素的差别。抽样调查中还没有100%完全符合的样本。）</p>
+<p>在​考证之后，看着两种横纵方向各有不同程度细节的图片，自然会产生这样的想法：“将它们试着进行复原的话，会是怎样的效果？” 事不宜迟赶紧进行尝试。</p>
+<p>此处以megumi的常驻SSR为例。</p>
+<p>在开始之前，先回顾一下前面的知识点。横版卡图的分辨率为1280x720，而竖版的分辨率为640x800。另外，和横版卡图相比，竖版卡图还进行了一定程度的比例缩放。因此，无论竖版卡图是否含有更多细节，都不可能直接把竖版卡图往横版上面复制粘贴上去就完事。必须要先对竖版进行缩放还原，然后再参照卡图边缘位置尽量无缝地贴回去。</p>
+<p>这是不进行处理，直接将竖版图叠加到横版图上的效果。为了便于进行对比，调低了竖版图的透明度。（搞得像动态模糊或者残影一样，莫名有点带感？）</p>
+<p>可以看出，竖版图实际上是被缩小了。这里对准脸部位置进行叠加，像手指、头发这些地方能够很明显地看出偏差。必须要将竖版图放大到原来的比例，才能与横版图完全重合。</p>
+<p>打开PS，在同一文件中打开横版卡图和竖版卡图，并在导入之后栅格化图层。此处使用PS的自动对齐图层功能。同时选择横版图与竖版图两个图层，在工具栏中选择 编辑 -&gt; 自动对齐图层，即可完成图片的拼接过程。</p>
+<p>但——是！这种像是实验报告或者论文腔调的东西并不是本文的主要目的。拼完图片之后，总会产生一个疑问：这样做有什么意义呢？</p>
+<p>回到本文开头的话题。关于立绘。竖版卡面有时候会多出一些细节，而这些细节能够让整张立绘更加完整。</p>
+<p>如图，拼接完成之后，歌织头上的呆毛能够完整地展现出来。用这样的拼接图抠取立绘的话，无疑能够补充更多细节。</p>
+<p>当然如果仅是为了呆毛这一点细节的话，直接从竖版图上抠取呆毛，再加到立绘上面要比这种绕圈子方便得多这不得不承认……所以真要纠结的话，好像确实……没太大意义……  不过，竖版图的缩放仍然是个问题。两张图的比例不一样大，抠出来的素材不能直接放上去用，因此使用PS完成拼图之后再进行抠图，或许是比较好的方法。</p>
+<p>而且拼接之后这张图的四个角落都是较为重复的背景内容。假如有PS大手子愿意的话，可以用PS将空白处补足，从而制成更完整的大图也说不定？</p>
+<p>（而且多了细节一些之后 其实还是挺好看的嘛。。）</p>
+<p>​</p>
+<p>另一点考察则是，自己因为副业的缘故对开发者一侧的情报有些兴趣。尤其是卡面的制作方面，目前已知的访谈、情报似乎并不太多，自己对于策划美术的对接流程了解也还不够。因此从本次考察中产生了一些疑问或者说好奇。</p>
+<p>“为什么竖版会有更多内容” 还算能够解释。人物在整张图中所占的比例太大的话，竖版卡图看起就跟大头贴一样，不太美观。因此不太可能直接从横版图中裁切出来就拿来用。缩放调整之后，自然会需要补充一些额外的细节，不然卡图上多出来的部分就成黑边了。​</p>
+<p>那么，这样的补充是在一开始就计划好的吗？是在横版图完成之后，根据策划方面的需求，让美术对竖版图进行额外的补充，还是说​在一开始就完成了含有更多细节，更高分辨率的全图，而横版图和竖版图都是从这张图上裁切得来的呢？亦或者是，在绘制过程进行的途中，一边协商，一边修正，随时进行调整，从而同时完成横版图和竖版图的？</p>
+<p>​这些疑问，期待其他的访谈，情报，根据其他线索的推理或者知情的同僚能够进行解答。</p>
+<p>​​事件还未结束。</p>
+<p>​注意到了吗？虽然事件的异样是一开始自己在对着侦探紬紬这张卡图舔着啊不对研究着的时候发现的，但展开考察之后反而没怎么讨论这张卡了。其原因是，在这张卡的两张卡图对比过程中，还有发现更有意思，更加意外的东西。</p>
+<p>回过头来再看看两张图的对比。</p>
+<p>注意紬紬右手的袖口。两张图中袖口与身后围栏之间的位置关系，有着很明显的差别。背后地平线上的建筑群，也存在少许的位置偏移。这表明，这张卡的竖版卡面不光是在纵向上有更多内容，人物立绘和背景之间的位置关系也与横版图产生了差别。</p>
+<p>和前文推断相吻合，竖版图并不是简单地从横版图上进行裁切然后加料，而是在构图、观感上有着自己的考量，并且会适当地进行调整。这样的做法，自己认为，与土豆中SR卡面那一类事情不同，是有着正面意义，值得肯定的。</p>
+<p>另外还有一点。注意紬紬身后的云彩。两张图之间云彩的差异，恐怕不是用背景位置不同就能解释清楚的。​倒不如进行猜想，两张卡图的不同背景是出自不同画师之手，各自与其他素材拼接组合，分别组成横版或者竖版卡面的。</p>
+<p>​那么，从流程的角度，这样的多画师多卡图协作是怎样完成的？这是起初就计划好的流水线式生产，还是临时采取的特别措施？其他SSR中也有过这样的情况吗，还是说这一次是首例？这些疑问，同样有待进一步的解答。迷侦探的推理，还没有得出结论……</p>
+</article><ul class="pager blog-pager"><li class="next"><a href="/2018/10/12/Tokyo/" data-toggle="tooltip" data-placement="top" title="Tokyo">下一篇</a></li></ul></div></div></div><footer><div class="container beautiful-jekyll-footer"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href="http://weibo.com/athrunv" title="Weibo"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-weibo"></i></span></a></li><li><a href="https://github.com/ellisnewman" title="GitHub"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-github"></i></span></a></li><li><a href="https://twitter.com/ellisnewman8" title="Twitter"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-twitter"></i></span></a></li><li><a href="mailto:ellisnewmanem@outlook.com" title="Email me"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-envelope"></i></span></a></li></ul><p class="copyright text-muted">© EllisNewman • 2018 • <a href="mailto:undefined"></a>
+</p><p class="theme-by text-muted">Theme by
+<a href="https://github.com/twoyao/beautiful-hexo">beautiful-hexo</a></p></div></div></div></footer><script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script><script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/js/main.js"></script><script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></body></html>
