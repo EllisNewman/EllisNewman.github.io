@@ -1,0 +1,14 @@
+{
+"companyName": "咸蛋黄麻薯蛋糕",
+"productName": "涅槃",
+"dataUrl": "ReleaseV2.data.unityweb",
+"wasmCodeUrl": "ReleaseV2.wasm.code.unityweb",
+"wasmFrameworkUrl": "ReleaseV2.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "ReleaseV2.jpg",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"}
+}
