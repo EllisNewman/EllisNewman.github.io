@@ -8,7 +8,7 @@ var SearchService = "";
    */
   SearchService = function(options) {
     var self = this;
-    
+
     self.config = $.extend({
       per_page: 10,
       selectors: {
@@ -31,11 +31,11 @@ var SearchService = "";
         btn_prev: "#u-search .btn-prev"
       },
       brands: {
+        'hexo': {logo: '', url: ''},
         'google': {logo: 'google.svg', url: 'https://cse.google.com'},
         'algolia': {logo: 'algolia.svg', url: 'https://www.algolia.com'},
-        'hexo': {logo: '', url: ''},
-        'azure': {logo: 'azure.svg', url: 'https://azure.microsoft.com/en-us/services/search/'},
-        'baidu': {logo: 'baidu.svg', url: 'http://zn.baidu.com/cse/home/index'}
+        'baidu': {logo: 'baidu.svg', url: 'http://zn.baidu.com/cse/home/index'},
+        'azure': {logo: 'azure.svg', url: 'https://azure.microsoft.com/en-us/services/search/'}
       },
       imagePath: ROOT + "img/"
     }, options);
@@ -70,7 +70,7 @@ var SearchService = "";
       self.dom.modal_ajax_content.removeClass('loaded');
       self.startLoading();
     };
-    
+
     self.afterQuery = function() {
       self.dom.modal_body.scrollTop(0);
       self.dom.modal_ajax_content.addClass('loaded');
@@ -109,37 +109,37 @@ var SearchService = "";
       self.dom.modal_error.html(errMsg);
       self.dom.modal_error.show();
     };
-    
+
     self.nextPage = function() {
       if (self.nav.next !== -1) {
         self.search(self.nav.next);
       }
     };
-    
+
     self.prevPage = function() {
       if (self.nav.prev !== -1) {
         self.search(self.nav.prev);
       }
     };
-    
+
     /**
      * Generate html for one result
      * @param url : (string) url
      * @param title : (string) title
      * @param digest : (string) digest
+     * @param index : 标号
      */
-    self.buildResult = function(url, title, digest) {
+    self.buildResult = function(url, title, digest, index) {
       var html = "";
       html = "<li>";
-      html +=   "<a class='result' href='" +url+ "'>";
-      html +=     "<span class='title'>" +title+ "</span>";
-      html +=     "<span class='digest'>" +digest+ "</span>";
-      html +=     "<span class='icon icon-chevron-thin-right'></span>";
-      html +=   "</a>";
+      html += "<a class='result' href='" +url+ "'>";
+      html += "<span class='title'>" +title+ "</span>";
+      if (digest !== "") html += "<span class='digest'>" +digest+ "</span>";
+      html += "</a>";
       html += "</li>";
       return html;
     };
-    
+
     /**
      * Close the modal, resume body scrolling
      * no param
@@ -149,7 +149,7 @@ var SearchService = "";
       self.dom.container.fadeOut();
       self.dom.body.removeClass('modal-active');
     };
-    
+
     /**
      * Searchform submit event handler
      * @param queryText : (string) the query text
@@ -161,19 +161,19 @@ var SearchService = "";
         self.search(1);
       }
     };
-    
+
     /**
      * Start loading bar animation
      * no param
      */
     self.startLoading = function() {
       self.dom.modal_loading_bar.show();
-      self.loadingTimer = setInterval(function() { 
+      self.loadingTimer = setInterval(function() {
         self.percentLoaded = Math.min(self.percentLoaded+5,95);
         self.dom.modal_loading_bar.css('width', self.percentLoaded+'%');
       }, 100);
     };
-    
+
     /**
      * Stop loading bar animation
      * no param
@@ -212,7 +212,7 @@ var SearchService = "";
       self.dom.btn_prev.off('click');
       self.dom.container.remove();
     };
-    
+
     /**
      * Load template and register event handlers
      * no param
@@ -233,11 +233,10 @@ var SearchService = "";
     self.init();
   };
 
-  var template = '<div id="u-search"><div class="modal"> <header class="modal-header" class="clearfix"><form id="u-search-modal-form" class="u-search-form" name="uSearchModalForm"> <input type="text" id="u-search-modal-input" class="u-search-input" /> <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit"> <span class="icon icon-search"></span> </button></form> <a class="btn-close"> <span class="icon icon-close"></span> </a><div class="modal-loading"><div class="modal-loading-bar"></div></div> </header> <main class="modal-body"><ul class="modal-results modal-ajax-content"></ul> </main> <footer class="modal-footer clearfix"><div class="modal-metadata modal-ajax-content"> <strong class="range"></strong> of <strong class="total"></strong></div><div class="modal-error"></div> <div class="logo"></div> <a class="nav btn-next modal-ajax-content"> <span class="text">NEXT</span> <span class="icon icon-chevron-right"></span> </a> <a class="nav btn-prev modal-ajax-content"> <span class="icon icon-chevron-left"></span> <span class="text">PREV</span> </a> </footer></div><div class="modal-overlay"></div></div>';
+  var template = '<div id="u-search"><div class="modal"> <header class="modal-header" class="clearfix"><form id="u-search-modal-form" class="u-search-form" name="uSearchModalForm"> <input type="text" id="u-search-modal-input" class="u-search-input" /> <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit"> <span class="fas fa-search"></span> </button></form> <a class="btn-close"> <span class="fas fa-times"></span> </a><div class="modal-loading"><div class="modal-loading-bar"></div></div> </header> <main class="modal-body"><ul class="modal-results modal-ajax-content"></ul> </main> <footer class="modal-footer clearfix"><div class="modal-metadata modal-ajax-content"> <strong class="range"></strong> of <strong class="total"></strong></div><div class="modal-error"></div> <div class="logo"></div> <a class="nav btn-next modal-ajax-content"> <span class="text">NEXT</span> <span class="fas fa-chevron-right"></span> </a> <a class="nav btn-prev modal-ajax-content"> <span class="fas fa-chevron-left"></span> <span class="text">PREV</span> </a> </footer></div><div class="modal-overlay"></div></div>';
 })(jQuery);
 
 var AlgoliaSearch;
-
 (function($) {
   'use strict';
 
@@ -248,9 +247,9 @@ var AlgoliaSearch;
   AlgoliaSearch = function(options) {
     SearchService.apply(this, arguments);
     var self = this;
-    var endpoint = "https://" +self.config.appId+ "-dsn.algolia.net/1/indexes/" +self.config.indexName;
+    var endpoint = "https://" +self.config.appId+ "-dsn.algolia.net/1/indexes/" + self.config.indexName;
     self.addLogo('algolia');
-    
+
     /**
      * Generate result list html
      * @param data : (array) result items
@@ -263,12 +262,12 @@ var AlgoliaSearch;
           url = ROOT + url;
         }
         var title = row.title;
-        var digest = row._highlightResult.excerptStrip.value || "";
-        html += self.buildResult(url, title, digest);
+        var digest = "";
+        html += self.buildResult(url, title, digest, index+1);
       });
       return html;
     };
-    
+
     /**
      * Generate metadata after a successful query
      * @param data : (object) the raw search response data
@@ -303,7 +302,7 @@ var AlgoliaSearch;
         self.dom.btn_prev.hide();
       }
     };
-    
+
     /**
      * Send a GET request
      * @param queryText : (string) the query text
@@ -319,7 +318,7 @@ var AlgoliaSearch;
         "x-algolia-api-key": self.config.apiKey
       }, function(data, status) {
         if (status === 'success' && data.hits && data.hits.length > 0) {
-          var results = self.buildResultList(data.hits); 
+          var results = self.buildResultList(data.hits);
           self.dom.modal_results.html(results);
         }
         else {
@@ -331,13 +330,13 @@ var AlgoliaSearch;
         }
       });
     };
-    
+
     return self;
   };
 
 })(jQuery);
-var AzureSearch;
 
+var AzureSearch;
 (function($) {
   'use strict';
 
@@ -351,7 +350,7 @@ var AzureSearch;
     var endpoint = "https://" +self.config.serviceName+ ".search.windows.net/indexes/" +self.config.indexName+ "/docs?api-version=2015-02-28";
     self.nav.current = 1;
     self.addLogo('azure');
-    
+
     /**
      * Generate result list html
      * @param data : (array) result items
@@ -369,7 +368,7 @@ var AzureSearch;
       });
       return html;
     };
-    
+
     /**
      * Generate metadata after a successful query
      * @param data : (object) the raw response data
@@ -405,7 +404,7 @@ var AzureSearch;
         self.dom.btn_prev.hide();
       }
     };
-    
+
     /**
      * Send a GET request
      * @param queryText : (string) the query text
@@ -447,8 +446,8 @@ var AzureSearch;
   };
 
 })(jQuery);
-var BaiduSearch;
 
+var BaiduSearch;
 (function($) {
   'use strict';
 
@@ -476,7 +475,7 @@ var BaiduSearch;
       });
       return html;
     };
-    
+
     /**
      * Generate metadata after a successful query
      * @param data : (object) the raw google custom search response data
@@ -510,7 +509,6 @@ var BaiduSearch;
     self.query = function(queryText, page, callback) {
       self.cse.getResult(queryText, function(data) {
         console.log("Searching: " + queryText);
-        console.log(data);
         self.cse.getError(function(data) {
           console.log(data);
         });
@@ -537,16 +535,16 @@ var BaiduSearch;
     };
 
     self.loadScript();
-    
+
     return self;
   };
 
 })(jQuery);
-var GoogleCustomSearch = "";
 
+var GoogleCustomSearch = "";
 (function($) {
   'use strict';
-  
+
   /**
    * Search by Google Custom Search Engine JSON API
    * @param options : (object)
@@ -571,7 +569,7 @@ var GoogleCustomSearch = "";
       });
       return html;
     };
-    
+
     /**
      * Generate metadata after a successful query
      * @param data : (object) the raw google custom search response data
@@ -605,7 +603,7 @@ var GoogleCustomSearch = "";
         self.dom.btn_prev.hide();
       }
     };
-    
+
     /**
      * Send a GET request
      * @param queryText : (string) the query text
@@ -621,8 +619,8 @@ var GoogleCustomSearch = "";
         num: self.config.per_page
       }, function(data, status) {
         if (status === 'success' && data.items && data.items.length > 0) {
-          var results = self.buildResultList(data.items); 
-          self.dom.modal_results.html(results);       
+          var results = self.buildResultList(data.items);
+          self.dom.modal_results.html(results);
         }
         else {
           self.onQueryError(queryText, status);
@@ -633,15 +631,15 @@ var GoogleCustomSearch = "";
         }
       });
     };
-    
+
     return self;
   };
 })(jQuery);
-var HexoSearch;
 
+var HexoSearch;
 (function($) {
   'use strict';
-  
+
   /**
   * Search by Hexo generator json content
   * @param options : (object)
@@ -652,7 +650,7 @@ var HexoSearch;
     self.config.endpoint = ROOT + ((options||{}).endpoint || "content.json");
     self.config.endpoint = self.config.endpoint.replace("//","/"); //make sure the url is correct
     self.cache = "";
-    
+
     /**
      * Search queryText in title and content of a post
      * Credit to: http://hahack.com/codes/local-search-engine-for-hexo/
@@ -687,14 +685,14 @@ var HexoSearch;
             post_content = post.text.trim();
             var start = 0, end = 0;
             if (first_occur >= 0) {
-              start = Math.max(first_occur-30, 0);
-              end = (start === 0) ? Math.min(200, post_content.length) : Math.min(first_occur+170, post_content.length);
+              start = Math.max(first_occur-40, 0);
+              end = (start === 0) ? Math.min(200, post_content.length) : Math.min(first_occur + 120, post_content.length);
               var match_content = post_content.substring(start, end);
               keywords.forEach(function(keyword) {
                 var regS = new RegExp(keyword, "gi");
-                match_content = match_content.replace(regS, "<b>"+keyword+"</b>");
+                match_content = match_content.replace(regS, "<b mark>"+keyword+"</b>");
               });
-              post.digest = match_content;
+              post.digest = match_content + "......";
             }
             else {
               end = Math.min(200, post_content.length);
@@ -705,7 +703,7 @@ var HexoSearch;
       }
       return foundMatch;
     };
-    
+
     /**
      * Generate result list html
      * @param data : (array) result items
@@ -713,13 +711,14 @@ var HexoSearch;
     self.buildResultList = function(data, queryText) {
       var results = [],
           html = "";
+      var i = 1;
       $.each(data, function(index, post) {
         if (self.contentSearch(post, queryText))
-          html += self.buildResult(post.permalink, post.title, post.digest);
+          html += self.buildResult(post.permalink, post.title, post.digest, i++);
       });
       return html;
     };
-    
+
     /**
      * Generate metadata after a successful query
      * @param data : (object) the raw google custom search response data
@@ -727,7 +726,7 @@ var HexoSearch;
     self.buildMetadata = function(data) {
       self.dom.modal_footer.hide();
     };
-    
+
     /**
      * Send a GET request
      * @param queryText : (string) the query text
@@ -743,16 +742,16 @@ var HexoSearch;
           start: startIndex,
           num: self.config.per_page
         }, function(data, status) {
-          if (status !== 'success' || 
-              !data || 
-              (!data.posts && !data.pages) || 
+          if (status !== 'success' ||
+              !data ||
+              (!data.posts && !data.pages) ||
               (data.posts.length < 1 && data.pages.length < 1)
             ) {
             self.onQueryError(queryText, status);
           }
           else {
             self.cache = data;
-            var results = ""; 
+            var results = "";
             results += self.buildResultList(data.pages, queryText);
             results += self.buildResultList(data.posts, queryText);
             self.dom.modal_results.html(results);
@@ -764,7 +763,7 @@ var HexoSearch;
         });
       }
       else {
-        var results = ""; 
+        var results = "";
         results += self.buildResultList(self.cache.pages, queryText);
         results += self.buildResultList(self.cache.posts, queryText);
         self.dom.modal_results.html(results);
@@ -774,7 +773,7 @@ var HexoSearch;
         }
       }
     };
-    
+
     return self;
   };
 

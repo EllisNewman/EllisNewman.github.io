@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察 - 星之海原 - Hoshiumi -</title>
+  
+    <meta name="keywords" content="im@s,技术">
+  
+  
+    <meta name="description" content="前言在本月初的日本电娱开发者大会CEDEC 2019中，MLTD团队出席并分享了一些开发经验。和去年Unite Tokyo 2018时较多的u3d技术细节介绍相比，本次分享更多地在统筹规划的层面，从测试、产品等岗位的角度进行讲述，或许更加贴近“幕后趣闻”一些。这里试着选取各位工程师分享的PPT，参考自己在unit...">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="/img/icon.png">
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            HOSHIUMI <b><sup style='color:#3AA757'></sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>博文
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/lab/
+                  
+                  
+                  
+                    id="lab"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>LAB
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>博文
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/lab/
+                  
+                  
+                  
+                    id="lab"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>LAB
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/2019/09/24/investigation-on-mltd-cedec-2019/">
+      MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://hoshiumi.cc" target="_blank" rel="nofollow noopener">
+    <img src="/img/icon.png">
+    <p>Ellis</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2019年9月24日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在本月初的日本电娱开发者大会CEDEC 2019中，MLTD团队出席并分享了一些开发经验。和去年Unite Tokyo 2018时较多的u3d技术细节介绍相比，本次分享更多地在统筹规划的层面，从测试、产品等岗位的角度进行讲述，或许更加贴近“幕后趣闻”一些。这里试着选取各位工程师分享的PPT，参考自己在unity手游开发时的经历进行解说，对这次分享作一个简要考察。</p>
+<a id="more"></a>
+
+<h2 id="运营的首要方针-——-「安定」"><a href="#运营的首要方针-——-「安定」" class="headerlink" title="运营的首要方针 —— 「安定」"></a>运营的首要方针 —— 「安定」</h2><p>讲解这一节的MLTD客户端开发工程师佐佐木克先生，简要介绍了整个团队担负的使命：时刻保持以用户需求为中心的商品战略意识，持续周期性地推出质量安定的新内容。对于「安定」，则给出了具体的定义：</p>
+<ul>
+<li>不随意暂停服务</li>
+<li>不因为更新而导致新的bug</li>
+<li>严格遵守日程安排</li>
+</ul>
+<p>说到日程安排，PPT中给出的一项很令人感兴趣的内容便是新曲推出的日程图了。从图中可以看到，一首新曲从最初提出概念，到最终发布一共有六个月的时间。</p>
+<p><img src="https://wx2.sinaimg.cn/large/9600cc2fgy1g7akrk0numj20vl0cdmz5.jpg" alt="avatar"></p>
+<p>虽然说起来是“推出一首新曲”，实际上会涉及到不少方面。站在企划层面来讲，是要遵照某一个系列顺序（如以前的MTG，现在的MTW），敲定出一个主题，并挑选出合适的偶像人选组成新的组合。围绕着这个主题概念，需要产出一到两首歌曲以及音频短剧以推出CD。而游戏这边，MLTD中则是要展开一次Platinum Tour活动，推出新曲的live演出，以及活动剧情等内容。上方图表是以粉色部分MLTD开发者相关工作内容为主，这里则试着扩展一下，在解说的同时试着推测其他层面在时间表中的各项事务。</p>
+<p>首先头两个月的工作内容，是决定新组合新乐曲的概念。定下基调，确立出想要传达的想法，然后联络各个职位的人员将其变为现实。这种从无到有的工作可能最接近通常意义上的“普罗丢色”所干的事情。确立之后，可以推测后续会有绘制主视觉图，音乐方面开始写曲填词等工作。</p>
+<p>从「4か月前」开始是开发部门的重点环节。程序员们进场，开始着手各项游戏相关的事务。除了活动数据等各种幕后的辛苦以外，也有直观的演出效果工作（比如舞台是沿用以前的还是略有改动，或者是建模新舞台？舞台上的灯光、特效是否需要额外制作？）。策划们也不会闲着，在这一时期内需要着手制定演出计划。猜测在这一时期内，活动曲应该至少在旋律上有一定的完成度了，因为在第三个月——同时也是「3か月前」，就会开始动作捕捉，从而得到Live舞蹈等动作文件数据。</p>
+<p>到第四个月，动作捕捉的数据录入完成，开发的工作告一段落。演出相关的作业是策划们的主场，将歌曲、舞蹈、数据等各类资源合并到一起，形成一体的live效果。猜测在这一时期，歌曲在创作方面应该也基本完成了。</p>
+<p>演出工作结束之后，开发的任务告一段落，迎来的是调试debug测试等发布前的最后准备。两周的测试时间是一个常见的规划，能够为发现的问题提供足够的余裕进行复现和修复。再往后就是活动在生放或者米粒垃圾上的预热，以及正式发布了。</p>
+<p>回头来讲，可以认为整个流程图的时间安排都较为充裕，以保证项目的安定。佐佐木先生也专门提到，工程师们的一项方针就是日程安排最优先，保证中长期规划顺利进行的同时做好眼前的工作。</p>
+<p><img src="https://wx3.sinaimg.cn/large/9600cc2fgy1g7aot08ur3j20nb0cxq3e.jpg" alt="avatar"><font>“点个火开个boost，加把劲赶上！”</font></p>
+<p>假如遇到难以确保测试时间的情况，即使新内容体量缩减也要保证不把含有bug或者潜在问题的新内容发布出去。（选择缩水也要避免跳票。至于具体什么缩了水嘛……嗯……）</p>
+<h2 id="服务端原则：可游戏时间最大化"><a href="#服务端原则：可游戏时间最大化" class="headerlink" title="服务端原则：可游戏时间最大化"></a>服务端原则：可游戏时间最大化</h2><p>这一部分由MLTD服务端开发工程师保科一成先生介绍。所谓的“可游戏时间最大化”，实际指的也就是MLTD在9012年依旧可以吹的不停机维护，不停服更新。这部分归功于MLTD服务端采用的GCP、GAE等服务，不过这些也不是什么新鲜情报，能有这样的成果还得归功于幕后付出的开发者们。</p>
+<p><img src="https://wx2.sinaimg.cn/large/9600cc2fgy1g7aox16e0mj20oc0e3t99.jpg" alt="avatar"><font>一连好几个「頑張って」，背后是不知道多少个通宵夜……一连好几个「頑張って」，背后是不知道多少个通宵夜……</font></p>
+<p>接下来准备讲解一下MLTD不停机更新的流程，不过在这之前先进行一点说明。当问到“一个游戏有哪些服？”的时候，一名玩家想到的可能是日服韩服欧服美服世界服（或者时代记忆的电信服网通服?）；而从开发者的角度，则可以划分为开发服、测试服和正式服。</p>
+<p>不难理解，程序员们手头上正在做着的新版本新内容，服务端和客户端在开发环境运行起来跑个debug，就是最直观的开发服。开发工作到了一定阶段，一般是单个版本号所需求的功能开发完成之后，则将该版本推送至测试服，在这里有专门的测试人员运行自动化测试脚本或者使用真机进行实际的测试。这两种类型的服务端通常只部署在公司内网，一般玩家能够接触到的，则仅有公开发布的正式服。（部分游戏提供给玩家参与的“公开测试服”又是另一回事）</p>
+<p>为便于表述，将更新前的旧版本称为v1，需要更新的新版本称作v2。则MLTD的更新发布流程如下述所示：</p>
+<p><img src="https://wx1.sinaimg.cn/large/9600cc2fgy1g7aq6nhuxfj20vy0oqjt8.jpg" alt="avatar"><font>图源自PPT，为便于说明去掉了原有注释图源自PPT，为便于说明去掉了原有注释</font></p>
+<p>如图所示，从左到右依次为正式服、测试服和开发服。首先开发服完成新版本的开发，客户端服务端均升至v2。然后两者均移至测试服中进行测试。注意测试服中仍保留v1版本的客户端，并且连接至v2服务端。这里是相当重要的一环（也是很大的工作量，毕竟两种客户端同时测），需要确保新版本服务端依然能够兼容老版本客户端进行游戏，才能够实现无缝的版本交接。</p>
+<p><img src="https://wx1.sinaimg.cn/large/9600cc2fgy1g7aqqt41o9j20vy0cjmxv.jpg" alt="avatar"><font></font></p>
+<p>测试工作结束之后是令人紧张又激动的正式发布时间。客户端方面，v2客户端apk在各大应用商店上架，供玩家下载更新；服务端方面直接在正式服上部署v2服务端，v1、v2同时运行并为各自版本客户端提供服务。</p>
+<p>随后逐渐撤下v1服务端，由v2服务端来为v1客户端提供服务。前面的测试已确认没有重大bug实际可行。此时的时间点正处在新版本发布和旧版本弃用之间，通常为一天的时间。v2客户端的一部分新功能已经可以使用，而v1客户端连接至v2服务端依然正常运行。</p>
+<p>（注意此时的测试服依然在辛苦地同时测试v1、v2客户端<em>(´ཀ`」 ∠)</em>   另外图上没有标注，实际项目中开发完成debug和fix之后，到这里在维护v2的同时可能也在着手更新的版本v3的开发了）</p>
+<p><img src="https://wx1.sinaimg.cn/large/9600cc2fgy1g7aqqt41o9j20vy0cjmxv.jpg" alt="avatar"><font></font></p>
+<p>最后到达强制更新版本的期限日，弃用旧版本app。此时的v1客户端再连接v2服务端已无法使用，必须更新到v2客户端。而v2服务端将所有新功能开放，供v2客户端完整地使用。至此，v2版本的更新圆满完成，准备进入下个版本v3的开发循环了。</p>
+<p>总结起来，MLTD的不停机更新，其重难点在于：</p>
+<ul>
+<li>服务端对新旧客户端的兼容性。一般的游戏客户端和服务端在版本上总是一一对应的。为了使MLTD能够前向、后向兼容（可以想象v2客户端还要跟v3服务端打交道），开发和测试必然付出了不少额外的工作量。</li>
+<li>渐进式的服务器部署方式。假设正式服有四台服务器，那么其中v1和v2版本的服务器数量则按照4/0，3/1，2/2，1/3，0/4的方式变化，这样循序渐进的更新免除了全面更新一步到位所必须导致的暂停服务，从玩家的角度看，停服更新的时间仅仅只有更新app所花费的那么一点时间。​</li>
+</ul>
+<h2 id="工程师们的挑战：给用户带来惊喜"><a href="#工程师们的挑战：给用户带来惊喜" class="headerlink" title="工程师们的挑战：给用户带来惊喜"></a>工程师们的挑战：给用户带来惊喜</h2><p>带来这一节的可是老面孔。MLTD客户端开发工程师池田早人先生，在去年的Unite Tokyo 2018上也曾进行过MLTD的技术分享，他本人也是法子P、JuliaP。池田先生对前面提到的团队使命作出了补充，要在时刻保持以用户需求为中心的商品战略意识，持续周期性地推出质量安定的新内容的基础之上，挑战新事物，给用户带来超乎预期的惊喜。要提供用户不敢想的，用户想了却不相信能做到的新东西。</p>
+<p>一个很有意思的事例是去年的感谢祭。在预告之后MLTD说到做到，真就在游戏内实装了一个完整的生放送功能，可以看直播，可以发留言，还能够参与问卷投票。就我自己的使用体验来讲，相同网络条件下的流畅度和稳定性也比屑站不知道高到哪里去了。这确实是一个从头至尾都没有预料到，而又切切实实相当完善的惊喜。</p>
+<p>其他如同琴叶回归、偶像英雄等时候的MLTD，也从运营到落地效果都有良好的表现。不过这里重点想提的，自然是最能体现开发团队技术力的13人Live。</p>
+<p>要说13人Live则不得不提AKANE大作战。其全称为Android Kousoku-ka And NativE-ka大作戦，早在MLTD还未进行beta测试时便已展开，作战内容是通过改良3D、2D的渲染流程，从而使游戏得到优化，在安卓阵营以及iPhone旧型号设备上流畅地运行。</p>
+<p>关于AKANE大作战的技术细节，如何进行DrawCall削减，如何利用IndexBuffer等内容在去年的分享中有详细介绍这里不再赘述。总之结果是，AKANE大作战取得了很好的成果，在没有大幅度降低画面质量的条件下降低了设备硬件的负担，不仅仅是为一些老旧低端机型保证了帧率，还为将来可能的提升打下基础。在这之上，一点点的优化积累才使得13人Live成为了现实，也成为了当时的一大话题。</p>
+<p>不过，AKANE大作战还不是开发部门技术力的全部。事实上在作战之后，开发团队就有检讨过仍存在优化空间的地方，比如后处理，比如LOD的调整，比如非重要对象降低渲染分辨率，模型骨骼简化等等方面。很可能就是为了进一步实现这些优化方法，本次分享中提到开发者们提出了一个新的代号：TEAM_UMIMI，Ultimate Millionlive wo Miseteyaru！</p>
+<p><img src="https://wx1.sinaimg.cn/large/9600cc2fgy1g7auujgkjtj20xc0ir0wp.jpg" alt="avatar"></p>
+<p>TEAM_UMIMI是团队内的一个技术研究项目，旨在研究MLTD正使用的，可能使用的各项技术，进一步挖掘MLTD的潜力。很凑巧的，前段时间公布了MLTD将要实装新模式39人Live，相信这很大程度上正是TEAM_UMIMI的研究成果。</p>
+<p>展望这个39人Live的话，一眼看上去从13人变到39人，似乎渲染压力变成了3倍。但如果同时对各处进行优化，比如进一步简化角色模型的话，问题可能并不会那么严重。</p>
+<p><img src="https://wx1.sinaimg.cn/large/9600cc2fgy1g7avta7u4bj212w0lqdqr.jpg" alt="avatar"><font>AKANE大作战当时的PPT。「もっと減らしなよ<del>」AKANE大作战当时的PPT。「もっと減らしなよ</del>」</font></p>
+<p>拿当初5人到13人的AKANE大作战为例。在优化之前，单个角色的模型要在Unity中读取并渲染出来，由于模型由表示躯干、衣装、饰品等部件的Mesh和分散的Sub Mesh组成，需要25次DrawCall来调用GPU进行绘制。而在AKANE大作战灵活运用CommadBuffer、IndexBuffer整合Sub Mesh一番优化之后，这个数字下减到了17次。原本5人到13人分别需要的125次和325次DrawCall，也就分别削减到了85和221次。可以想象，如果单个模型的指标能够再次下降，那么更多人同台Live的想法也并不是不可能。</p>
+<p>当然这里只是拿DrawCall举个例子，并不代表最终结果，它仅仅只是优化任务的其中一项，其他还有许多方面的工作同样需要努力，像是减少人物模型、场景模型所使用的多边形数量，简化光照效果，提高渲染管线效率等等。（个人还比较好奇土豆团队会不会考虑用上Unity最新的的LWRP，看他们愿不愿意折腾引擎升级了）</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>安定的基础上，再带来惊喜。MLTD的运营术便是「安定と驚き」。</p>
+<p>新的一年，MLTD的技术团队也没有闲着啊，从akane到umimi还有点个火，依然能够感受到MLTD团队本身对于项目的热情。对于39人Live，自己来讲并不确定能有多少完成度，会有多高的配置要求。如同13人Live实装一样，部分机型不适用、 不流畅的情况肯定会发生，但是往前一点看，这样的事情随着手机机能不断提升，旧机型逐渐淘汰始终是难以避免的。现在的话，继续保持期待就好了。</p>
+<p>–</p>
+<p>注1：除各小节讲述者自己注明的职业名称外， 文中各职业称呼为便于讲解采用国内行业对应职能岗位的叫法，不代表团队中存在对应名称的真实职位。</p>
+<p>不过有意思的一点，就是池田早人先生在一些更正式的场合出现的称谓是「リードプログラマ」，是肩负进行管理、版本管理等任务的「まとめ役」，在我们这边排起来也得是个项目组组长，但自称仍然是一名「ミリシタクライアントエンジニア」。</p>
+<p>注2：「缩水换跳票」只是我个人的说法，并没有别的意思。以土豆的安定原则，保证活动按时上线当然是更重要的，也是合理的。相对应的，在其他项目中，也会有不断跳票以确保产品质量的处理方式。</p>
+<p>作为一个延展阅读，Valve曾经在向Mod制作者分享开发经验时提出“Two day safe period”的原则，即发布之前两天内疯狂跑测试，跑出bug就返工+跳票，修好了bug再来两天疯狂跑测试，不断循环，直到测不出bug再对外发布。</p>
+<p>（这就是G胖在大概十年前疯狂数2的年代整天跳票的原因吗！）</p>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-05T12:58:02+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年5月5日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/im-s/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>im@s</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8A%80%E6%9C%AF/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>技术</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://ellisnewman.github.io/2019/09/24/investigation-on-mltd-cedec-2019/&title=MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察 - 星之海原 - Hoshiumi -&summary=前言在本月初的日本电娱开发者大会CEDEC 2019中，MLTD团队出席并分享了一些开发经验。和去年Unite Tokyo 2018时较多的u3d技术细节介绍相比，本次分享更多地在统筹规划的层面，从测试、产品等岗位的角度进行讲述，或许更加贴近“幕后趣闻”一些。这里试着选取各位工程师分享的PPT，参考自己在unity手游开发时的经历进行解说，对这次分享作一个简要考察。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://ellisnewman.github.io/2019/09/24/investigation-on-mltd-cedec-2019/&title=MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察 - 星之海原 - Hoshiumi -&summary=前言在本月初的日本电娱开发者大会CEDEC 2019中，MLTD团队出席并分享了一些开发经验。和去年Unite Tokyo 2018时较多的u3d技术细节介绍相比，本次分享更多地在统筹规划的层面，从测试、产品等岗位的角度进行讲述，或许更加贴近“幕后趣闻”一些。这里试着选取各位工程师分享的PPT，参考自己在unity手游开发时的经历进行解说，对这次分享作一个简要考察。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://ellisnewman.github.io/2019/09/24/investigation-on-mltd-cedec-2019/&title=MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察 - 星之海原 - Hoshiumi -&summary=前言在本月初的日本电娱开发者大会CEDEC 2019中，MLTD团队出席并分享了一些开发经验。和去年Unite Tokyo 2018时较多的u3d技术细节介绍相比，本次分享更多地在统筹规划的层面，从测试、产品等岗位的角度进行讲述，或许更加贴近“幕后趣闻”一些。这里试着选取各位工程师分享的PPT，参考自己在unity手游开发时的经历进行解说，对这次分享作一个简要考察。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/02/06/rinze-carmen/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>再谈《卡门》与凛世</p>
+                <p class='content'>《卡门》的歌剧和小说版本学习完了。原以为小说是厚厚一本大部头要像追二百八十三集大型电视连续剧一样花上数十天的量，结果是只有五六十页左右的中短篇。篇幅短一些也是好事，或许更容易介绍出去让别人一起看...</p>
+              </a>
+            
+            
+              <a class='next' href='/2019/03/27/kemonofriends/'>
+                <p class='title'>关于「从三幕剧结构考察动物朋友第一季」的一点笔记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>烟瘾持续发作，为了解毒遂成此文，还好在12话上映之前赶着完成了。
+
+
+
+在niconico上搜索兽娘1和烟草的相关内容时，发现了这么一篇考察视频 。本以为自己现在才看到已经火星多年了，仔细一看投...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运营的首要方针-——-「安定」"><span class="toc-text">运营的首要方针 —— 「安定」</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务端原则：可游戏时间最大化"><span class="toc-text">服务端原则：可游戏时间最大化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工程师们的挑战：给用户带来惊喜"><span class="toc-text">工程师们的挑战：给用户带来惊喜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-text">结语</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:ellisnewmanem@outlook.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/EllisNewman"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/playlist?id=64307403"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        Use
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Hoshiumi</a>
+        as theme, total visits
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          times
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://hoshiumi.cc" target="_blank" rel="noopener">Copyright © 2020 Ellis Newman</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
+    });
+  </script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["/img/bg/abz01.jpg", "/img/bg/bi01.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
