@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>星之海原 - Hoshiumi -</title>
-  <icon>http://ellisnewman.github.io/icon.png</icon>
+  <icon>http://ellisnewman.github.io/img/icon.png</icon>
   <subtitle>嵐の中で輝いて　その夢をあきらめないで</subtitle>
   <link href="/atom.xml" rel="self"/>
   
