@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>星之海原 - Hoshiumi -</title>
+  <icon>http://ellisnewman.github.io/icon.png</icon>
+  <subtitle>嵐の中で輝いて　その夢をあきらめないで</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ellisnewman.github.io/"/>
+  <updated>2020-07-11T08:06:51.732Z</updated>
+  <id>http://ellisnewman.github.io/</id>
+  
+  <author>
+    <name>EllisNewman</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>完全烹饪教程：谁都能学会做的麻辣土豆</title>
+    <link href="http://ellisnewman.github.io/2020/07/11/cooking-method-of-spicy-potatoes/"/>
+    <id>http://ellisnewman.github.io/2020/07/11/cooking-method-of-spicy-potatoes/</id>
+    <published>2020-07-11T03:21:46.000Z</published>
+    <updated>2020-07-11T08:06:51.732Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;麻辣土豆的做法_麻辣土豆怎么做_麻辣土豆好吃吗_麻辣土豆有什么功效_小编为你带来麻辣土豆完整做法教学&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="技术" scheme="http://ellisnewman.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>映入眼中的是……</title>
+    <link href="http://ellisnewman.github.io/2020/03/05/rinze01/"/>
+    <id>http://ellisnewman.github.io/2020/03/05/rinze01/</id>
+    <published>2020-03-05T14:57:18.000Z</published>
+    <updated>2020-07-11T02:23:25.132Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;「目には青葉　山ほととぎす　初鰹」&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="创作故事" scheme="http://ellisnewman.github.io/tags/%E5%88%9B%E4%BD%9C%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>再谈《卡门》与凛世</title>
+    <link href="http://ellisnewman.github.io/2020/02/06/rinze-carmen/"/>
+    <id>http://ellisnewman.github.io/2020/02/06/rinze-carmen/</id>
+    <published>2020-02-06T13:54:02.000Z</published>
+    <updated>2020-05-05T05:52:28.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;《卡门》的歌剧和小说版本学习完了。原以为小说是厚厚一本大部头要像追二百八十三集大型电视连续剧一样花上数十天的量，结果是只有五六十页左右的中短篇。篇幅短一些也是好事，或许更容易介绍出去让别人一起看，毕竟自己已经直观感受到了，再怎么看各路wiki简评，看同僚们在考察中简单的介绍说明，都不如实际过一遍故事内容来得直观、生动。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MLTD运营术：对MLTD在CEDEC2019中经验分享的一点考察</title>
+    <link href="http://ellisnewman.github.io/2019/09/24/investigation-on-mltd-cedec-2019/"/>
+    <id>http://ellisnewman.github.io/2019/09/24/investigation-on-mltd-cedec-2019/</id>
+    <published>2019-09-24T13:07:31.000Z</published>
+    <updated>2020-07-11T02:45:53.140Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在本月初的日本电娱开发者大会CEDEC 2019中，MLTD团队出席并分享了一些开发经验。和去年Unite Tokyo 2018时较多的u3d技术细节介绍相比，本次分享更多地在统筹规划的层面，从测试、产品等岗位的角度进行讲述，或许更加贴近“幕后趣闻”一些。这里试着选取各位工程师分享的PPT，参考自己在unity手游开发时的经历进行解说，对这次分享作一个简要考察。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="技术" scheme="http://ellisnewman.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于「从三幕剧结构考察动物朋友第一季」的一点笔记</title>
+    <link href="http://ellisnewman.github.io/2019/03/27/kemonofriends/"/>
+    <id>http://ellisnewman.github.io/2019/03/27/kemonofriends/</id>
+    <published>2019-03-27T05:49:29.000Z</published>
+    <updated>2020-05-05T04:06:32.062Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;烟瘾持续发作，为了解毒遂成此文，还好在12话上映之前赶着完成了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【TC03妄想】Outsider</title>
+    <link href="http://ellisnewman.github.io/2018/12/15/tc03/"/>
+    <id>http://ellisnewman.github.io/2018/12/15/tc03/</id>
+    <published>2018-12-15T11:16:00.000Z</published>
+    <updated>2020-05-05T04:38:58.751Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="创作故事" scheme="http://ellisnewman.github.io/tags/%E5%88%9B%E4%BD%9C%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>im@s推歌30天-合辑</title>
+    <link href="http://ellisnewman.github.io/2018/11/14/imas-songs-recommend/"/>
+    <id>http://ellisnewman.github.io/2018/11/14/imas-songs-recommend/</id>
+    <published>2018-11-14T15:40:31.000Z</published>
+    <updated>2020-07-11T02:56:23.198Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/img/imas-songs-recommend.jpg&quot; alt=&quot;pic&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="音乐" scheme="http://ellisnewman.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从Unity开发者角度对MLTD的一点考察</title>
+    <link href="http://ellisnewman.github.io/2018/11/04/investigation-on-mltd-as-unity-developer/"/>
+    <id>http://ellisnewman.github.io/2018/11/04/investigation-on-mltd-as-unity-developer/</id>
+    <published>2018-11-04T12:38:35.000Z</published>
+    <updated>2020-07-11T06:30:34.417Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;自己对于Unity开发，特别是基于Unity的手游开发仍在学习当中。在玩mltd的同时，也有从开发者角度对mltd进行观察，收集情报，以及一定程度的拆包，以期从mltd这个项目中学到一点开发相关的经验。同时也部分了解了mltd的素材资源获取机制，尝试用c#写成了一点小工具获取和处理游戏资源，在这里一并进行经验总结和讨论。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="技术" scheme="http://ellisnewman.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Into the W.I.N.G.</title>
+    <link href="http://ellisnewman.github.io/2018/11/01/into-the-wing/"/>
+    <id>http://ellisnewman.github.io/2018/11/01/into-the-wing/</id>
+    <published>2018-11-01T10:09:42.000Z</published>
+    <updated>2020-07-11T02:54:56.141Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/img/into_the_wing.jpg&quot; alt=&quot;pic&quot;&gt;&lt;/p&gt;
+&lt;p&gt;“你对你的担当偶像，是怎样的看法？”&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="创作故事" scheme="http://ellisnewman.github.io/tags/%E5%88%9B%E4%BD%9C%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于麻辣土豆SSR卡面的一点考察</title>
+    <link href="http://ellisnewman.github.io/2018/10/26/Investigation-on-mltd-ssr-tachie/"/>
+    <id>http://ellisnewman.github.io/2018/10/26/Investigation-on-mltd-ssr-tachie/</id>
+    <published>2018-10-26T09:33:17.000Z</published>
+    <updated>2020-07-11T02:31:30.799Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可能有同僚早就注意到了也说不定。不过这也没啥方法检索的样子，也没办法查重(x)。总之在这里试着进行一些考察和分析。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="技术" scheme="http://ellisnewman.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tokyo</title>
+    <link href="http://ellisnewman.github.io/2018/10/12/Tokyo/"/>
+    <id>http://ellisnewman.github.io/2018/10/12/Tokyo/</id>
+    <published>2018-10-12T09:43:53.000Z</published>
+    <updated>2020-05-05T04:38:13.333Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;「Producer，我……我回金泽去了！」&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="创作故事" scheme="http://ellisnewman.github.io/tags/%E5%88%9B%E4%BD%9C%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Diver</title>
+    <link href="http://ellisnewman.github.io/2018/07/16/Diver/"/>
+    <id>http://ellisnewman.github.io/2018/07/16/Diver/</id>
+    <published>2018-07-16T13:45:21.000Z</published>
+    <updated>2020-07-11T02:57:38.773Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 「ただの幸せに気づいたら、もう二度と溺れないよ。」&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="创作故事" scheme="http://ellisnewman.github.io/tags/%E5%88%9B%E4%BD%9C%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剧场里的访客</title>
+    <link href="http://ellisnewman.github.io/2018/06/14/guest-in-the-theater/"/>
+    <id>http://ellisnewman.github.io/2018/06/14/guest-in-the-theater/</id>
+    <published>2018-06-14T13:53:06.000Z</published>
+    <updated>2020-05-05T04:37:16.831Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上午九点，紬走进了剧场的大门。今天的计划表上也是各种各样的课程和工作呢。&lt;/p&gt;
+&lt;p&gt; “在这之前，先把那个交给Producer吧。”&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="创作故事" scheme="http://ellisnewman.github.io/tags/%E5%88%9B%E4%BD%9C%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《游戏编程模式》中的设计模式</title>
+    <link href="http://ellisnewman.github.io/2018/04/06/game-programming-pattern/"/>
+    <id>http://ellisnewman.github.io/2018/04/06/game-programming-pattern/</id>
+    <published>2018-04-06T13:41:49.000Z</published>
+    <updated>2020-05-05T04:28:06.766Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最早接触设计模式是在跟着教程造轮子，编写游戏引擎的过程中，有看到相关教程提到：使用单例模式这样一种设计模式，创建一个全局的，静态的，能够确定只生成单个实例从而避免重复生成或引用的对象。当时的教程中使用单例的主要案例是代表游戏引擎进行游戏整体统筹管理的GameEngine类，为其创建一个单例的实例指针，并在实际程序中调用该指针来进行各类操作。那个时候，自己对“设计模式”到底是个什么东西还没有一个明确的概念，仅仅将其理解为一项技巧，一个trick。后来在系统学习之后，才意识到设计模式其实并不是那种用来解决某个具体问题的屠龙之技，而是将执行各种功能的“代码们”进行组织集合的方式，更偏向于“道”而不是“术”。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="技术" scheme="http://ellisnewman.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《浪潮之巅》，长江后浪与前浪的那些事</title>
+    <link href="http://ellisnewman.github.io/2016/06/05/lang-chao-zhi-dian/"/>
+    <id>http://ellisnewman.github.io/2016/06/05/lang-chao-zhi-dian/</id>
+    <published>2016-06-05T13:40:22.000Z</published>
+    <updated>2020-05-05T04:30:11.340Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 　　&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《极简欧洲史》</title>
+    <link href="http://ellisnewman.github.io/2016/05/31/short-history-of-europe/"/>
+    <id>http://ellisnewman.github.io/2016/05/31/short-history-of-europe/</id>
+    <published>2016-05-31T13:27:52.000Z</published>
+    <updated>2020-05-05T04:30:04.110Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文是约翰·赫斯特著《极简欧洲史》阅读后的笔记，部分内容直接参考或总结自书中内容，也有自己从其他地方查询资料后加入的同期史实以辅佐说明。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《人类：我们的故事》</title>
+    <link href="http://ellisnewman.github.io/2016/04/09/story-of-us/"/>
+    <id>http://ellisnewman.github.io/2016/04/09/story-of-us/</id>
+    <published>2016-04-09T13:35:05.000Z</published>
+    <updated>2020-05-05T04:08:50.910Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;同名系列纪录片观后笔记。记录每一集主要内容的基础上补充添加了一些同时间发生或相关联的大事件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://ellisnewman.github.io/2014/09/08/hello-world/"/>
+    <id>http://ellisnewman.github.io/2014/09/08/hello-world/</id>
+    <published>2014-09-08T10:09:42.000Z</published>
+    <updated>2020-05-05T04:28:30.685Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;研究了下github.io的网站搭建，终于又能把Hoshiumi.cc这个域名拣回来用了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随记" scheme="http://ellisnewman.github.io/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>
