@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>星之海原 - Hoshiumi -</title>
+  <title>星之海原 ~ Hoshiumi ~</title>
   <icon>http://ellisnewman.github.io/img/icon.png</icon>
   <subtitle>嵐の中で輝いて　その夢をあきらめないで</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ellisnewman.github.io/"/>
-  <updated>2021-04-28T15:20:18.191Z</updated>
+  <updated>2021-11-24T11:50:57.951Z</updated>
   <id>http://ellisnewman.github.io/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闪耀色彩与「主客合一」</title>
+    <link href="http://ellisnewman.github.io/2021/11/14/integration-of-sub-and-obj/"/>
+    <id>http://ellisnewman.github.io/2021/11/14/integration-of-sub-and-obj/</id>
+    <published>2021-11-14T11:34:03.000Z</published>
+    <updated>2021-11-24T11:50:57.951Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​​本文是关于note上看到的文章，&lt;a href=&quot;https://note.com/2r96/n/n4bd3047f8a36&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;日本の芸術・文化における〈主客合一〉の傾向について ～『雪国』とシャニマスの共通点～&lt;/a&gt;的笔记感想和讨论。&lt;/p&gt;
+&lt;p&gt;什么是「主客合一」？&lt;/p&gt;
+&lt;p&gt;要介绍这个概念首先需要对「主」和「客」进行说明。
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>幽谷雾子：心之归宿在何处？</title>
+    <link href="http://ellisnewman.github.io/2021/09/22/kiriko01/"/>
+    <id>http://ellisnewman.github.io/2021/09/22/kiriko01/</id>
+    <published>2021-09-22T15:35:12.000Z</published>
+    <updated>2021-11-24T11:54:45.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​​从前有几个盲人想要知道什么是大象。这一天，街上有人牵来了一头象，于是盲人们都一同上前去摸一摸大象。&lt;/p&gt;
+&lt;p&gt;第一个人摸到了象的肚子，于是他说：“大象就好比是一堵墙，密不透风。”&lt;br&gt;第二个人摸到象的腿，反驳说，“大象又圆又粗，明明就是一根柱子。”&lt;br&gt;第三个人摸着象的鼻子说，“大象又细又长，就像一根管子。”&lt;br&gt;第四个人抓到了象的尾巴，说：“大象根本就是一条绳子。”&lt;/p&gt;
+&lt;p&gt;四个人都坚持自己的观点，关于到底什么才是大象这个问题，开始争吵起来。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>アンカーボルトソング：锚栓之歌，时代之歌</title>
+    <link href="http://ellisnewman.github.io/2021/06/06/anchor-bolt-song/"/>
+    <id>http://ellisnewman.github.io/2021/06/06/anchor-bolt-song/</id>
+    <published>2021-06-06T04:38:00.000Z</published>
+    <updated>2021-11-24T11:42:35.491Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​​“本家动画……！”&lt;/p&gt;
+&lt;p&gt;当本次活动剧情的主旨浮现出来的时候，自己第一反应便是本家动画的最后几话。随着事业的发展，原本作为同伴一起活动的大家忙于个人活动，减少了相互之间的交流。得整个团体/组合的存在都面临危机的那段剧情。&lt;/p&gt;
+&lt;p&gt;尽管有些相似，但本次的SC活动アンカーボルトソング并没有将过去的做法完全照搬，而是在本家呈现的主题上进一步发散，谱写出了有着相当水准的发展部，可以说是属于SC自己，属于现如今这个时代的故事。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="im@s" scheme="http://ellisnewman.github.io/tags/im-s/"/>
+    
+      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于【ロー・ポジション】杜野凛世的感想</title>
@@ -367,44 +432,6 @@
     
     
       <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《人类：我们的故事》</title>
-    <link href="http://ellisnewman.github.io/2016/04/09/story-of-us/"/>
-    <id>http://ellisnewman.github.io/2016/04/09/story-of-us/</id>
-    <published>2016-04-09T13:35:05.000Z</published>
-    <updated>2020-05-05T04:08:50.910Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;同名系列纪录片观后笔记。记录每一集主要内容的基础上补充添加了一些同时间发生或相关联的大事件。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="笔记" scheme="http://ellisnewman.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://ellisnewman.github.io/2014/09/08/hello-world/"/>
-    <id>http://ellisnewman.github.io/2014/09/08/hello-world/</id>
-    <published>2014-09-08T10:09:42.000Z</published>
-    <updated>2020-05-05T04:28:30.685Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;研究了下github.io的网站搭建，终于又能把Hoshiumi.cc这个域名拣回来用了。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="随记" scheme="http://ellisnewman.github.io/tags/%E9%9A%8F%E8%AE%B0/"/>
     
   </entry>
   
